@@ -1,0 +1,39 @@
+{
+  "name": "@jason12306/el-select-infinite-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/el-select-infinite-scroll.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --hot --progress",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js --progress",
+    "pub": "npm run build && npm publish"
+  },
+  "keywords": [
+    "el-select",
+    "infinite scroll"
+  ],
+  "author": "Jason12306 <vanyi0924@gmail.com>",
+  "homepage": "https://github.com/Jason12306/el-select-infinite-scroll",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^7.0.3",
+    "element-ui": "^2.15.14",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.5.3",
+    "mockjs": "^1.1.0",
+    "postcss-loader": "^6.2.1",
+    "vue": "^2.6.10",
+    "vue-loader": "15.9.8",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "5.69.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "4.7.4",
+    "webpack-merge": "5.8.0"
+  },
+  "peerDependencies": {
+    "element-ui": "2.x",
+    "vue": "2.x"
+  }
+}
