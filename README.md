@@ -1,5 +1,7 @@
 # el-select-infinite-scroll
 
+[简体中文](./README-zh_CN.md)
+
 A dropdown select component based on Element UI that supports infinite scrolling for loading options, suitable for Vue 2 projects. This component listens for the dropdown menu reaching the bottom to facilitate scenarios where more data needs to be loaded asynchronously.
 
 ## Features

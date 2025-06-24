@@ -1,7 +1,8 @@
 {
   "name": "@jason12306/el-select-infinite-scroll",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Vue 2 dropdown select component based on Element UI, supporting infinite scroll to load more options asynchronously.",
+  "private": false,
   "main": "dist/el-select-infinite-scroll.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --hot --progress",
