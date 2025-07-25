@@ -1,18 +1,16 @@
 <template>
   <div>
     <div>VALUE: {{ value }}</div>
-    <el-select-infinite-scroll
-      v-model="value"
-      @reached-bottom="handleReachedBottom"
-      @visible-change="handleVisibleChange"
-    >
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      >
-      </el-option>
+    <el-select-infinite-scroll v-model="value" :data="data" :find-cur-index-fn="(d) => d.value ">
+      <template v-slot="{ list }">
+        <el-option
+          v-for="item in list"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        >
+        </el-option>
+      </template>
     </el-select-infinite-scroll>
   </div>
 </template>
@@ -25,10 +23,10 @@ const Random = Mock.Random
 
 const defaultData = () => {
   const options = []
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 35; i++) {
     options.push({
       value: 'Options' + (i + 1),
-      label: Random.name(),
+      label: 'Label' + (i + 1),
     })
   }
   return options
@@ -39,22 +37,21 @@ export default {
   components: { ElSelectInfiniteScroll },
   data() {
     return {
-      options: defaultData(),
+      data: [],
       value: '',
     }
   },
-  methods: {
-    handleReachedBottom() {
-      this.options.push({
-        value: 'Options' + Date.now(),
-        label: 'new ' + Random.name(),
-      })
-    },
-    handleVisibleChange(visible) {
-      if (!visible) {
-        // this.options = defaultData()
-      }
-    },
+  methods: {},
+  mounted() {
+    setTimeout(() => {
+      // this.data = defaultData()
+      this.value = 'Options5'
+    }, 3000)
+
+     setTimeout(() => {
+      this.data = defaultData()
+      // this.value = 'Options20'
+    }, 2000)
   },
 }
 </script>
